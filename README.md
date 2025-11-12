@@ -58,6 +58,24 @@
 
 ## 安装与运行
 
+### 方法一：使用预构建的 Docker 镜像文件
+
+1. 下载 Docker 镜像文件（在 Releases 页面中找到最新版本）
+2. 加载镜像：
+   ```bash
+   docker load -i ai-travel-planner.tar.gz
+   ```
+   
+3. 运行容器：
+   ```bash
+   docker run -p 8080:8080 ai-travel-planner
+   ```
+
+4. 访问应用：
+   打开浏览器访问 http://localhost:8080
+
+### 方法二：克隆项目并本地构建
+
 1. 克隆项目到本地:
    ```
    git clone &lt;repo-url&gt;
