@@ -22,7 +22,7 @@ jobs:
       if: github.event_name != 'pull_request'
       uses: docker/login-action@v2
       with:
-        registry: registry.cn-hangzhou.aliyuncs.com
+        registry: crpi-4i2pz1sdtuxmovzx.cn-hangzhou.personal.cr.aliyuncs.com
         username: ${{ secrets.ALIYUN_USERNAME }}
         password: ${{ secrets.ALIYUN_PASSWORD }}
     
@@ -32,8 +32,8 @@ jobs:
         context: .
         push: ${{ github.event_name != 'pull_request' }}
         tags: |
-          registry.cn-hangzhou.aliyuncs.com/your-namespace/ai-travel-planner:latest
-          registry.cn-hangzhou.aliyuncs.com/your-namespace/ai-travel-planner:${{ github.sha }}
+          crpi-4i2pz1sdtuxmovzx.cn-hangzhou.personal.cr.aliyuncs.com/ai_traveller/ai_traveller_doc:latest
+          crpi-4i2pz1sdtuxmovzx.cn-hangzhou.personal.cr.aliyuncs.com/ai_traveller/ai_traveller_doc:${{ github.sha }}
     
     - name: Build local Docker image for release
       if: github.event_name == 'release'
