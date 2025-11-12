@@ -38,12 +38,18 @@ jobs:
     - name: Build local Docker image for release
       if: github.event_name == 'release'
       run: |
+        echo "Building local Docker image..."
         docker build -t ai-travel-planner:latest .
+        echo "Image built successfully!"
+        docker images | grep ai-travel-planner
     
     - name: Save Docker image as artifact
       if: github.event_name == 'release'
       run: |
+        echo "Saving Docker image as tar.gz..."
         docker save ai-travel-planner:latest | gzip > ai-travel-planner.tar.gz
+        ls -la ./ai-travel-planner.tar.gz
+        echo "File saved successfully!"
     
     - name: Upload Docker image as release asset
       if: github.event_name == 'release'
