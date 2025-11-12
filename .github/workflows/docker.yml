@@ -53,7 +53,7 @@ jobs:
     
     - name: Upload Docker image as artifact
       if: github.event_name == 'push'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ai-travel-planner-docker-image
         path: ./ai-travel-planner.tar.gz
