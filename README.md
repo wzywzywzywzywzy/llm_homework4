@@ -148,7 +148,7 @@ docker run -p 8080:8080 ai-travel-planner
 
 ## GitHub Actions
 
-项目包含一个GitHub Actions工作流，用于在推送代码时自动构建Docker镜像并推送到阿里云容器镜像服务。
+项目包含一个GitHub Actions工作流,用于在推送代码时自动构建Docker镜像并推送到阿里云容器镜像服务。
 
 要使用此功能，请执行以下操作：
 1. 在阿里云容器镜像服务控制台创建命名空间和镜像仓库
